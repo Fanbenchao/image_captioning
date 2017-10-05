@@ -118,12 +118,12 @@ class COCO:
         print 'index created!'
 
         # create class members
-        self.anns = anns
-        self.imgToAnns = imgToAnns
-        self.catToImgs = catToImgs
-        self.imgs = imgs
+        self.anns = anns #{annotation['id']:annotation}
+        self.imgToAnns = imgToAnns #{annotation['image_id']: [annotation]}
+        self.catToImgs = catToImgs #[]
+        self.imgs = imgs    #{image['id']:image}
         self.cats = cats
-        self.img_name_to_id = img_name_to_id
+        self.img_name_to_id = img_name_to_id #{image['filename']:image['id']}
 
     def info(self):
         """
