@@ -10,7 +10,8 @@ from utils.coco.coco import *
 
 def main(argv):
     parser = argparse.ArgumentParser()
-    
+#卷积神经网络需要大量的带标记的图像数据
+#LSTM需要与之匹配的词向量
     parser.add_argument('--phase', default='train', help='Phase: Can be train, val or test')
     parser.add_argument('--load', action='store_true', default=False, help='Turn on to load the pretrained model')
     
