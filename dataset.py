@@ -57,7 +57,7 @@ def prepare_train_data(args):
     image_dir, caption_file, annotation_file = args.train_image_dir, args.train_caption_file, args.train_annotation_file
     init_embed_with_glove, vocab_size, word_table_file, glove_dir = args.init_embed_with_glove, args.vocab_size, args.word_table_file, args.glove_dir
     dim_embed, batch_size, max_sent_len = args.dim_embed, args.batch_size, args.max_sent_len
-
+    #取出标题长度大于最大长度的数据
     coco = COCO(caption_file)
     coco.filter_by_cap_len(max_sent_len)
 
