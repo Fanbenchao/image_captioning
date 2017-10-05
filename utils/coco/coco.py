@@ -445,5 +445,5 @@ class COCO:
         self.dataset['images'] = [img for img in self.dataset['images'] if keep_img.get(img['id'],0)>0]
 
         self.createIndex()
-
+        #相当于将标题长度多于规定最大长度的数据提取出来
 
